@@ -17,9 +17,5 @@
     "email": "hello@arbelosinteractive.com",
     "url": "https://www.arbelosinteractive.com/"
   },
-  "type": "library",
-  "dependencies": {
-    "com.arbelos.interactables": "https://github.com/ArbelosInteractive/unity-interactables.git",
-    "com.arbelos.gooru": "https://github.com/STEMuli-Tx/gooru-client.git"
-  }
+  "type": "library"
 }
