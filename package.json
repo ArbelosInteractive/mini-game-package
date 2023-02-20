@@ -1,0 +1,25 @@
+{
+  "name": "com.arbelos.minigame",
+  "version": "1.0.0",
+  "displayName": "Mini-Game-Package",
+  "description": "A package of scripts for creating mini games.",
+  "unity": "2021.3",
+  "unityRelease": "3f1",
+  "documentationUrl": "https://example.com/",
+  "changelogUrl": "https://github.com/ArbelosInteractive/mini-game-package/blob/main/CHANGELOG.md",
+  "licensesUrl": "https://example.com/licensing.html",
+  "keywords": [
+    "MiniGame",
+    "Arbelos"
+  ],
+  "author": {
+    "name": "Arbelos Interactive Inc",
+    "email": "hello@arbelosinteractive.com",
+    "url": "https://www.arbelosinteractive.com/"
+  },
+  "type": "library",
+  "dependencies": {
+    "com.arbelos.interactables": "https://github.com/ArbelosInteractive/unity-interactables.git",
+    "com.arbelos.gooru": "https://github.com/STEMuli-Tx/gooru-client.git"
+  }
+}
