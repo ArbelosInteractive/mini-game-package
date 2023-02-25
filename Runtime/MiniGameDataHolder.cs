@@ -7,13 +7,21 @@ namespace Arbelos
 {
     public class MiniGameDataHolder : MonoBehaviour
     {
-        [SerializeField] private bool isPersistent; //if the mini game will live in the world, mark this true.
+        public enum MiniGameDataMode
+        {
+            LearningJourney,
+            Quest,
+            Persistent
+        }
 
-        [Header("Gooru Data")] 
-        [SerializeField] private string classID;
-        [SerializeField] private string lessonID;
-        [SerializeField] private int milestoneIndex;
-        [SerializeField] private string collectionID;
-        [SerializeField] private string questionId;
+        [Tooltip("Use this to set where the data comes from")]
+        public MiniGameDataMode dataMode;
+
+        [Header("Learning journey Data")] 
+        public string classID;
+        public string lessonID;
+        public int milestoneIndex;
+        public string collectionID;
+        public string questionId;
     }
 }
