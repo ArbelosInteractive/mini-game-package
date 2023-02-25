@@ -11,7 +11,7 @@ namespace Arbelos
     public abstract class AddressablesManager : MonoBehaviour
     {
         public static AddressablesManager Instance { get; private set; }
-        private List<AsyncOperationHandle> _asyncOperationHandles = new List<AsyncOperationHandle>();
+        protected List<AsyncOperationHandle> _asyncOperationHandles = new List<AsyncOperationHandle>();
         
         public void LoadAddressableGameObject(string assetAddress, Action<AsyncOperationHandle<GameObject>> callback)
         {
@@ -25,7 +25,7 @@ namespace Arbelos
             _asyncOperationHandles.Remove(handle);
         }
         
-        private void CleanUp()
+        protected void CleanUp()
         {
             foreach (var handle in _asyncOperationHandles)
             {

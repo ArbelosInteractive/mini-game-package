@@ -17,3 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.2] - 2023-02-25
 ### Added
 - Added AsyncOperationHandleExtensions
+
+## [1.0.3] - 2023-02-25
+### Changed
+- Made various methods and variables protected in downloader and manager scripts

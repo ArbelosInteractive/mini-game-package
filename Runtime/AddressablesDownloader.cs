@@ -8,9 +8,9 @@ namespace Arbelos
 {
     public abstract class AddressablesDownloader : MonoBehaviour
     {
-        #region private variables
+        #region protected variables
 
-        [SerializeField] private bool loadNextScene = true;
+        [SerializeField] protected bool loadNextScene = true;
 
         #endregion
 
@@ -23,12 +23,12 @@ namespace Arbelos
 
         #endregion
 
-        private static float BytesToKiloBytes(long bytes)
+        protected static float BytesToKiloBytes(long bytes)
         {
             return bytes / 1024f;
         }
 
-        private static void ClearPreviousCatalog()
+        protected static void ClearPreviousCatalog()
         {
             string path = Application.persistentDataPath + "/com.unity.addressables/";
             if (Directory.Exists(path))
