@@ -9,6 +9,6 @@ namespace Arbelos
       }
 
       public void Initialize(MiniGameDataHolder dataHolder);
-      public ResultStatus OnMiniGameComplete();
+      public void MiniGameComplete();
    }
 }

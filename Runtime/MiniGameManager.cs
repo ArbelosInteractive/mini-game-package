@@ -8,9 +8,10 @@ namespace Arbelos
     public class MiniGameManager : MonoBehaviour
     {
         public static MiniGameManager Instance;
-        private Transform attachTransform;  //make all mini games a child of this transform
-        public GameObject currentMiniGameObject;
-        
+        [SerializeField] private Transform attachTransform;  //make all mini games a child of this transform
+        private GameObject _currentMiniGameObject;
+        private MiniGameDataHolder _currentMiniGameData;
+        private AsyncOperationHandle<GameObject> _currentHandle;
         private void Awake()
         {
             if (Instance == null)
@@ -30,15 +31,35 @@ namespace Arbelos
 
         private void OnAddressableLoaded(AsyncOperationHandle<GameObject> handle)
         {
-            //spawn the mini game
-            currentMiniGameObject = Instantiate(handle.Result, attachTransform);
+            _currentHandle = handle;
+            _currentMiniGameObject = Instantiate(handle.Result, attachTransform);
+            _currentMiniGameData = _currentMiniGameObject.GetComponent<MiniGameDataHolder>();
+            IMiniGame miniGame = _currentMiniGameObject.GetComponent<IMiniGame>();
+            miniGame.Initialize(_currentMiniGameData);
+        }
+
+        public void OnMiniGameCompleted(IMiniGame.ResultStatus result)
+        {
+            if (result == IMiniGame.ResultStatus.Success)
+            {
+                //TODO: send success api call to gooru
+            }
+            else
+            {
+                //TODO: send failure api call to gooru
+            }
+        }
+
+        public void DeSpawnMiniGame()
+        {
+            Destroy(_currentMiniGameObject);
             
-            //get the mini game data holder
-            MiniGameDataHolder dataHolder = currentMiniGameObject.GetComponent<MiniGameDataHolder>();
+            AddressablesManager.Instance.UnloadAddressable(_currentHandle);
             
-            //get the mini game and initialize it
-            IMiniGame miniGame = currentMiniGameObject.GetComponent<IMiniGame>();
-            miniGame.Initialize(dataHolder);
+            _currentMiniGameObject = null;
+            _currentMiniGameData = null;
+            _currentHandle = default;
+
         }
     }
 }

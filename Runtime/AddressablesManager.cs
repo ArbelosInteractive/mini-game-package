@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
@@ -10,18 +11,23 @@ namespace Arbelos
     public abstract class AddressablesManager
     {
         public static AddressablesManager Instance { get; private set; }
-        private List<AsyncOperationHandle> asyncOperationHandles = new List<AsyncOperationHandle>();
+        private List<AsyncOperationHandle> _asyncOperationHandles = new List<AsyncOperationHandle>();
         
         public void LoadAddressableGameObject(string assetAddress, Action<AsyncOperationHandle<GameObject>> callback)
         {
-            var opHandle = Addressables.LoadAssetAsync<GameObject>(assetAddress);
+            AsyncOperationHandle<GameObject> opHandle = Addressables.LoadAssetAsync<GameObject>(assetAddress);
             opHandle.Completed += callback;
-            asyncOperationHandles.Add(opHandle);
+            _asyncOperationHandles.Add(opHandle);
+        }
+
+        public void UnloadAddressable(AsyncOperationHandle handle)
+        {
+            _asyncOperationHandles.Remove(handle);
         }
         
         private void CleanUp()
         {
-            foreach (var handle in asyncOperationHandles)
+            foreach (var handle in _asyncOperationHandles)
             {
                 Addressables.Release(handle);
             }
