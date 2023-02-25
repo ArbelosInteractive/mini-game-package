@@ -8,10 +8,10 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 
 namespace Arbelos
 {
-    public abstract class AddressablesManager : MonoBehaviour
+    public class AddressablesManager : MonoBehaviour
     {
         public static AddressablesManager Instance { get; private set; }
-        protected List<AsyncOperationHandle> _asyncOperationHandles = new List<AsyncOperationHandle>();
+        private List<AsyncOperationHandle> _asyncOperationHandles = new List<AsyncOperationHandle>();
         
         public void LoadAddressableGameObject(string assetAddress, Action<AsyncOperationHandle<GameObject>> callback)
         {
@@ -25,12 +25,17 @@ namespace Arbelos
             _asyncOperationHandles.Remove(handle);
         }
         
-        protected void CleanUp()
+        private void CleanUp()
         {
             foreach (var handle in _asyncOperationHandles)
             {
                 Addressables.Release(handle);
             }
+        }
+
+        private void OnDestroy()
+        {
+            CleanUp();
         }
     }
 }

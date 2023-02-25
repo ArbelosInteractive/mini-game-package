@@ -21,3 +21,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.3] - 2023-02-25
 ### Changed
 - Made various methods and variables protected in downloader and manager scripts
+
+## [1.0.4] - 2023-02-25
+### Removed
+- Removed abstract keyword from addressables manager
+
+### Added
+- Added OnDestroy method to addressables manager
