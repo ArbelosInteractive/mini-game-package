@@ -9,3 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.0] - 2023-02-20
 ### Added
 - Initial setup of package
+
+## [1.0.1] - 2023-02-25
+### Changed
+- Made addressables downloader and manager into MonoBehaviour 

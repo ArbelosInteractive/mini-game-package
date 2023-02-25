@@ -8,7 +8,7 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 
 namespace Arbelos
 {
-    public abstract class AddressablesManager
+    public abstract class AddressablesManager : MonoBehaviour
     {
         public static AddressablesManager Instance { get; private set; }
         private List<AsyncOperationHandle> _asyncOperationHandles = new List<AsyncOperationHandle>();

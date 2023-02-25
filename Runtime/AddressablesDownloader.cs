@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 namespace Arbelos
 {
-    public abstract class AddressablesDownloader
+    public abstract class AddressablesDownloader : MonoBehaviour
     {
         #region private variables
 
