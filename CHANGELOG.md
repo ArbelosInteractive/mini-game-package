@@ -48,3 +48,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.8] - 2023-02-26
 ### Changed
 - Updated OnMiniGameCompleted on MiniGameManager
+
+## [1.0.9] - 2023-02-26
+### Changed
+- Changed GUIDs on various meta files
