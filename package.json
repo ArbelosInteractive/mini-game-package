@@ -1,6 +1,6 @@
 {
   "name": "com.arbelos.minigame",
-  "version": "1.0.10",
+  "version": "1.0.9",
   "displayName": "Mini-Game-Package",
   "description": "A package of scripts for creating mini games.",
   "unity": "2021.3",
