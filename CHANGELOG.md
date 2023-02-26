@@ -31,8 +31,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.0.5] - 2023-02-25
 ### Changed
-- changed header text to better reflect fields
-- made fields public
+- Changed header text to better reflect fields
+- Made fields public
 
 ### Added
 - Added a MiniGameDataMode which can be set to indicate where to get the data from
+
+## [1.0.6] - 2023-02-25
+### Added
+- Added awake method to addressables manager

@@ -13,6 +13,18 @@ namespace Arbelos
         public static AddressablesManager Instance { get; private set; }
         private List<AsyncOperationHandle> _asyncOperationHandles = new List<AsyncOperationHandle>();
         
+        private void Awake()
+        {
+            if (Instance == null)
+            {
+                Instance = this;
+            }
+            else
+            {
+               Destroy(this);
+            }
+        }
+
         public void LoadAddressableGameObject(string assetAddress, Action<AsyncOperationHandle<GameObject>> callback)
         {
             AsyncOperationHandle<GameObject> opHandle = Addressables.LoadAssetAsync<GameObject>(assetAddress);
