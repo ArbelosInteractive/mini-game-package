@@ -43,4 +43,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.0.7] - 2023-02-26
 ### Changed
-- changed method signiture of MiniGameCompleted
+- Changed method signature of MiniGameCompleted
+
+## [1.0.8] - 2023-02-26
+### Changed
+- Updated OnMiniGameCompleted on MiniGameManager

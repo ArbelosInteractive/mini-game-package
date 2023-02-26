@@ -40,14 +40,31 @@ namespace Arbelos
 
         public void OnMiniGameCompleted(IMiniGame.ResultStatus result)
         {
-            if (result == IMiniGame.ResultStatus.Success)
+            switch (_currentMiniGameData.dataMode)
             {
-                //TODO: send success api call to gooru
+                case MiniGameDataHolder.MiniGameDataMode.LearningJourney:
+                {
+                    if (result == IMiniGame.ResultStatus.Success)
+                    {
+                        //TODO: send success api call to gooru
+                    }
+                    else
+                    {
+                        //TODO: send failure api call to gooru
+                    }
+                    break;
+                }
+                case MiniGameDataHolder.MiniGameDataMode.Quest:
+                {
+                    break;
+                }
+                case MiniGameDataHolder.MiniGameDataMode.Persistent:
+                {
+                    break;
+                }
             }
-            else
-            {
-                //TODO: send failure api call to gooru
-            }
+            
+            DeSpawnMiniGame();
         }
 
         public void DeSpawnMiniGame()
