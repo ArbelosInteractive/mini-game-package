@@ -1,28 +1,30 @@
+using Fusion;
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 
 namespace Arbelos
 {
-    public class AddressablesManager : MonoBehaviour
+    public class AddressablesManagerNetworked : NetworkBehaviour
     {
-        public static AddressablesManager Instance { get; private set; }
+        public static AddressablesManagerNetworked Instance { get; private set; }
         private List<AsyncOperationHandle> _asyncOperationHandles = new List<AsyncOperationHandle>();
         
-        private void Awake()
+        public override void Spawned()
         {
-            if (Instance == null)
+            if (Instance)
             {
-                Instance = this;
+                Runner.Despawn(Object);
             }
             else
             {
-               Destroy(this);
+                Instance = this;
+                var rootObj = GameObject.Find("------- Managers ----------");
+                transform.parent = rootObj.transform;
             }
+
         }
 
         public void LoadAddressableGameObject(string assetAddress, Action<AsyncOperationHandle<GameObject>> callback)

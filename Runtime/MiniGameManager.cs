@@ -26,7 +26,7 @@ namespace Arbelos
 
         public void LoadMiniGame(string addressableName)
         {
-            AddressablesManager.Instance.LoadAddressableGameObject(addressableName, OnAddressableLoaded);
+            AddressablesManagerNetworked.Instance.LoadAddressableGameObject(addressableName, OnAddressableLoaded);
         }
 
         private void OnAddressableLoaded(AsyncOperationHandle<GameObject> handle)
@@ -71,7 +71,7 @@ namespace Arbelos
         {
             Destroy(_currentMiniGameObject);
             
-            AddressablesManager.Instance.UnloadAddressable(_currentHandle);
+            AddressablesManagerNetworked.Instance.UnloadAddressable(_currentHandle);
             
             _currentMiniGameObject = null;
             _currentMiniGameData = null;
