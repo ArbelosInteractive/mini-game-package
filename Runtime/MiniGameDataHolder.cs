@@ -25,7 +25,7 @@ namespace Arbelos
         public string questionId;
 
         [Header("Quest Data")] 
-        public string questID;
-        public string objectiveID;
+        public int questID;
+        public int objectiveID;
     }
 }
