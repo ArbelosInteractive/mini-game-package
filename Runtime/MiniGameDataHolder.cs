@@ -23,5 +23,9 @@ namespace Arbelos
         public int milestoneIndex;
         public string collectionID;
         public string questionId;
+
+        [Header("Quest Data")] 
+        public string questID;
+        public string objectiveID;
     }
 }
