@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.ResourceManagement.AsyncOperations;
+using System.Linq;
 
 namespace Arbelos
 {
@@ -23,7 +24,8 @@ namespace Arbelos
             {
                 Destroy(this);
             }
-            _addressablesManager = FindObjectOfType<IAddressablesManager>();
+            IEnumerable<IAddressablesManager> addressablesManagerList = FindObjectsOfType<MonoBehaviour>().OfType<IAddressablesManager>();
+            _addressablesManager = addressablesManagerList.ElementAt(0);
         }
 
         public void LoadMiniGame(string addressableName)
