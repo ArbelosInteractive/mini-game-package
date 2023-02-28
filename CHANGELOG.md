@@ -60,3 +60,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.11] - 2023-02-27
 ### Added
 - Added QuestID and ObjectiveID to mini game data holder
+
+## [1.0.12] - 2023-02-28
+### Added
+- Added IAddressablesManager
