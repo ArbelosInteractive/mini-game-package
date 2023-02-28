@@ -1,5 +1,5 @@
 # mini-game-package
-A package that contains mini game related code and functionality that can easily be customized and scaled for Unity projects. This package requires photon fusion.
+A package that contains mini game related code and functionality that can easily be customized and scaled for Unity projects. 
 
 ###### **NOTE: This package requires 3 additional packages as dependencies.**
 
