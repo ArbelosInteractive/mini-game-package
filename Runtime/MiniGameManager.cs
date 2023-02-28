@@ -9,6 +9,7 @@ namespace Arbelos
     {
         public static MiniGameManager Instance;
         [SerializeField] private Transform attachTransform;  //make all mini games a child of this transform
+        private IAddressablesManager _addressablesManager;
         private GameObject _currentMiniGameObject;
         private MiniGameDataHolder _currentMiniGameData;
         private AsyncOperationHandle<GameObject> _currentHandle;
@@ -22,11 +23,12 @@ namespace Arbelos
             {
                 Destroy(this);
             }
+            _addressablesManager = FindObjectOfType<IAddressablesManager>();
         }
 
         public void LoadMiniGame(string addressableName)
         {
-            AddressablesManagerNetworked.Instance.LoadAddressableGameObject(addressableName, OnAddressableLoaded);
+            _addressablesManager.LoadAddressableGameObject(addressableName, OnAddressableLoaded);
         }
 
         private void OnAddressableLoaded(AsyncOperationHandle<GameObject> handle)
@@ -71,7 +73,7 @@ namespace Arbelos
         {
             Destroy(_currentMiniGameObject);
             
-            AddressablesManagerNetworked.Instance.UnloadAddressable(_currentHandle);
+            _addressablesManager.UnloadAddressable(_currentHandle);
             
             _currentMiniGameObject = null;
             _currentMiniGameData = null;
