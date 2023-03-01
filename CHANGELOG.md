@@ -66,3 +66,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added IAddressablesManager
 - Removed AddressableManagerNetworked
 - Updated ReadMe
+
+## [1.0.13] - 2023-03-01
+### Added
+- Added a tivia game to samples

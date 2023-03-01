@@ -17,5 +17,12 @@
     "email": "hello@arbelosinteractive.com",
     "url": "https://www.arbelosinteractive.com/"
   },
-  "type": "library"
+  "type": "library",
+  "samples": [
+    {
+      "displayName": "Trivia Game",
+      "description": "A very basic example of a mini game",
+      "path": "Samples~/TriviaGame"
+    }
+  ]
 }
