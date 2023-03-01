@@ -12,7 +12,7 @@ Please also download the following packages:
 # To play the Sample game:
 - Download all the packages
 - Set up the addressable settings and the prefab to the addressable group
-- ![Addressables settings]([http://url/to/img.png](https://github.com/ArbelosInteractive/mini-game-package/blob/main/AddressablesSettings.jpg))
+- ![Addressables settings]([https://github.com/ArbelosInteractive/mini-game-package/blob/main/AddressablesSettings.jpg])
 - Add the login and demo scenes to build settings
 - Open the login scene
 - press play
