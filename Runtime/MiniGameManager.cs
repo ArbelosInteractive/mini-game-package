@@ -14,6 +14,7 @@ namespace Arbelos
         private GameObject _currentMiniGameObject;
         private MiniGameDataHolder _currentMiniGameData;
         private AsyncOperationHandle<GameObject> _currentHandle;
+        
         private void Awake()
         {
             if (Instance == null)
@@ -24,12 +25,17 @@ namespace Arbelos
             {
                 Destroy(this);
             }
-            IEnumerable<IAddressablesManager> addressablesManagerList = FindObjectsOfType<MonoBehaviour>().OfType<IAddressablesManager>();
-            _addressablesManager = addressablesManagerList.ElementAt(0);
         }
 
         public void LoadMiniGame(string addressableName)
         {
+            if(_addressablesManager == null)
+            {
+                IEnumerable<IAddressablesManager> addressablesManagerList = FindObjectsOfType<MonoBehaviour>().OfType<IAddressablesManager>();
+                _addressablesManager = addressablesManagerList.ElementAt(0);
+            }
+
+
             _addressablesManager.LoadAddressableGameObject(addressableName, OnAddressableLoaded);
         }
 
