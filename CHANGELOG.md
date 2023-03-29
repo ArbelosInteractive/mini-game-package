@@ -71,3 +71,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Added a trivia game to samples
 - Update gitignore
+
+## [1.0.14] - 2023-03-29
+### Added
+- Added a difficulty setting for mini game
+- Update variable names in mini game data holder

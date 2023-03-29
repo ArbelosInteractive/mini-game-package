@@ -18,14 +18,17 @@ namespace Arbelos
         public MiniGameDataMode dataMode;
 
         [Header("Learning journey Data")] 
-        public string classID;
-        public string lessonID;
-        public int milestoneIndex;
-        public string collectionID;
-        public string questionId;
+        public string learningJourneyClassID;
+        public string learningJourneyLessonID;
+        public int learningJourneyMilestoneIndex;
+        public string learningJourneyCollectionID;
+        public string learningJourneyQuestionId;
+        [Range(0,10)] public int learningJourneyMiniGameDifficulty;
 
         [Header("Quest Data")] 
         public int questID;
-        public int objectiveID;
+        public int questObjectiveID;
+        public string questQuestionId;
+        [Range(0,10)] public int questMiniGameDifficulty;
     }
 }
