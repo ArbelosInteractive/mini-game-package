@@ -22,7 +22,7 @@ namespace Arbelos
         public string learningJourneyLessonID;
         public int learningJourneyMilestoneIndex;
         public string learningJourneyCollectionID;
-        public string learningJourneyQuestionId;
+        public string learningJourneyQuestionID;
 
         [Header("Quest Data")] 
         public int questID;
