@@ -1,0 +1,16 @@
+{
+    "name": "com.MiniGame.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:cd4ed7ac443ed194fbdd225a3ca1f7b4"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
