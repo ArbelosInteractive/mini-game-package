@@ -8,15 +8,18 @@ namespace Arbelos
     [CustomEditor(typeof(MiniGameDataHolder))]
     public class MiniGameDataHolderInspector : Editor
     {
-        public VisualTreeAsset m_InspectorXML;
 
         public override VisualElement CreateInspectorGUI()
         {
             // Create a new VisualElement to be the root of our inspector UI
             VisualElement myInspector = new VisualElement();
 
+            var guid = "b213b00c824c7f547ace93da3b83dc5d"; // found in meta file of uxml
+            var assetPath = AssetDatabase.GUIDToAssetPath(guid);
+
             //Load and clone a visual tree from UXML
-            m_InspectorXML.CloneTree(myInspector);
+            VisualTreeAsset visualTree = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>(assetPath);
+            visualTree.CloneTree(myInspector);
 
             EnumField dataMode = myInspector.Q<EnumField>("dataMode");
 
