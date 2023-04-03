@@ -80,4 +80,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.15] - 2023-04-03
 ### Removed
 - Removed difficulty setting since that will come from gooru
+
+### Changed
 - Update variable names in mini game data holder
+
+## [1.0.16] - 2023-04-03
+### Added
+- Added a custom inspector that only displays fields related to the data mode selected
