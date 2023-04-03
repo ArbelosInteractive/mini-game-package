@@ -23,12 +23,10 @@ namespace Arbelos
         public int learningJourneyMilestoneIndex;
         public string learningJourneyCollectionID;
         public string learningJourneyQuestionId;
-        [Range(1,10)] public int learningJourneyMiniGameDifficulty;
 
         [Header("Quest Data")] 
         public int questID;
         public int questObjectiveID;
-        public string questQuestionId;
-        [Range(1,10)] public int questMiniGameDifficulty;
+        public string questQuestionID;
     }
 }

@@ -76,3 +76,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Added a difficulty setting for mini game
 - Update variable names in mini game data holder
+
+## [1.0.15] - 2023-04-03
+### Removed
+- Removed difficulty setting since that will come from gooru
+- Update variable names in mini game data holder
