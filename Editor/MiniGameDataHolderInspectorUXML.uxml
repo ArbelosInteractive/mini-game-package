@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <uie:EnumField label="Data Mode" value="Center" binding-path="dataMode" name="dataMode" />
+    <ui:TextField picking-mode="Ignore" label="Class ID" binding-path="learningJourneyClassID" name="learningJourneyClassID" />
+    <ui:TextField picking-mode="Ignore" label="Lesson ID" name="learningJourneyLessonID" binding-path="learningJourneyLessonID" />
+    <uie:IntegerField label="Milestone Index" value="0" binding-path="learningJourneyMilestoneIndex" name="learningJourneyMilestoneIndex" />
+    <ui:TextField picking-mode="Ignore" label="Collection ID" value="filler text" name="learningJourneyCollectionID" binding-path="learningJourneyCollectionID" />
+    <ui:TextField picking-mode="Ignore" label="Question ID" name="learningJourneyQuestionID" binding-path="learningJourneyQuestionID" />
+    <uie:IntegerField label="Quest ID" value="0" binding-path="questID" name="questID" />
+    <uie:IntegerField label="Objective ID" value="0" name="questObjectiveID" binding-path="questObjectiveID" />
+    <ui:TextField picking-mode="Ignore" label="Question ID" name="questQuestionID" binding-path="questQuestionID" />
+</ui:UXML>
