@@ -87,3 +87,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.16] - 2023-04-03
 ### Added
 - Added a custom inspector that only displays fields related to the data mode selected
+
+## [1.0.17] - 2023-05-01
+### Added
+- Added two new methods to IMiniGame interface to save/load minigame data
